@@ -483,12 +483,16 @@
                         Which events will you attend? / לאילו אירועים תגיעו?
                     </label>
                     <label>
-                        <input type="checkbox" name="attendance" value="morning"> 
-                        Morning Ceremony at the Kotel (9 AM - 12 PM) / טקס הבוקר בכותל
+                        <input type="checkbox" name="attendance" value="plaza"> 
+                        9 AM (Jewish Quarter Plaza) / 9:00 ברחבת הרובע היהודי
+                    </label>
+                    <label>
+                        <input type="checkbox" name="attendance" value="kotel"> 
+                        10 AM (Kotel/Western Wall) / 10:00 בכותל המערבי
                     </label>
                     <label>
                         <input type="checkbox" name="attendance" value="evening"> 
-                        Evening Dinner Celebration (7 PM) / ארוחת הערב החגיגית
+                        7 PM Evening Celebration / 19:00 חגיגת הערב
                     </label>
                 </div>
 
@@ -572,8 +576,9 @@
             emailBody += `\nEvents Attending:\n`;
             if (attendance.length > 0) {
                 attendance.forEach(event => {
-                    if (event === 'morning') emailBody += `- Morning Ceremony at the Kotel (9 AM - 12 PM)\n`;
-                    if (event === 'evening') emailBody += `- Evening Dinner Celebration (7 PM)\n`;
+                    if (event === 'plaza') emailBody += `- 9 AM (Jewish Quarter Plaza)\n`;
+                    if (event === 'kotel') emailBody += `- 10 AM (Kotel/Western Wall)\n`;
+                    if (event === 'evening') emailBody += `- 7 PM Evening Celebration\n`;
                 });
             } else {
                 emailBody += `- No events selected\n`;
@@ -629,8 +634,9 @@
             message += `\n📅 Events Attending:\n`;
             if (attendance.length > 0) {
                 attendance.forEach(event => {
-                    if (event === 'morning') message += `✅ Morning Ceremony at the Kotel (9 AM - 12 PM)\n`;
-                    if (event === 'evening') message += `✅ Evening Dinner Celebration (7 PM)\n`;
+                    if (event === 'plaza') message += `✅ 9 AM (Jewish Quarter Plaza)\n`;
+                    if (event === 'kotel') message += `✅ 10 AM (Kotel/Western Wall)\n`;
+                    if (event === 'evening') message += `✅ 7 PM Evening Celebration\n`;
                 });
             } else {
                 message += `❌ No events selected\n`;
@@ -646,7 +652,7 @@
             
             // Create WhatsApp link with Rachel's number
             const encodedMessage = encodeURIComponent(message);
-            const whatsappLink = `https://wa.me/16173089164?text=${encodedMessage}`;
+            const whatsappLink = `https://wa.me/+16173089164?text=${encodedMessage}`;
             
             // Open WhatsApp
             window.open(whatsappLink, '_blank');
