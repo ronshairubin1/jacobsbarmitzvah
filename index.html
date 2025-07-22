@@ -650,11 +650,11 @@
                 message += `\n💬 Comments: ${formData.get('special-requests')}\n`;
             }
             
-            // Create WhatsApp link with Rachel's number
+            // Create WhatsApp link with international +1 format
             const encodedMessage = encodeURIComponent(message);
             const whatsappLink = `https://wa.me/+16173089164?text=${encodedMessage}`;
             
-            // Open WhatsApp
+            // Open WhatsApp directly to Rachel with pre-filled message
             window.open(whatsappLink, '_blank');
         }
     </script>
