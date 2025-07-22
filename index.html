@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jacob's Bar Mitzvah - August 7, 2025</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #2a4a7f;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 10px 30px rgba(42, 74, 127, 0.15);
+            border-radius: 15px;
+            overflow: hidden;
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #2a4a7f, #1a365d);
+            color: #f0d78c;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .header h2 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        .header .name {
+            font-size: 42px;
+            font-weight: 800;
+            margin: 20px 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header .hebrew {
+            font-size: 20px;
+            direction: rtl;
+            margin-bottom: 20px;
+        }
+        
+        .date-location {
+            background: #e8f4f8;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .date-location h2 {
+            color: #2a4a7f;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        
+        .hebrew-date {
+            font-size: 18px;
+            direction: rtl;
+            color: #2a4a7f;
+            margin-bottom: 15px;
+        }
+        
+        .content {
+            padding: 40px 30px;
+        }
+        
+        .photo-section {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .jacob-photo {
+            width: 280px;
+            height: 350px;
+            object-fit: cover;
+            object-position: center top;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(42, 74, 127, 0.3);
+            border: 6px solid white;
+            margin-bottom: 30px;
+        }
+        
+        .location-photos {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+        
+        .location-photo {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 6px 20px rgba(42, 74, 127, 0.2);
+            border: 4px solid white;
+        }
+        
+        .hurva-photo {
+            filter: brightness(1.3) contrast(1.1);
+        }
+        
+        .photo-caption {
+            font-size: 14px;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        
+        .schedule {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 30px 0;
+        }
+        
+        .schedule h3 {
+            color: #2a4a7f;
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+        
+        .schedule-item {
+            margin: 15px 0;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .schedule-time {
+            font-weight: bold;
+            color: #2a4a7f;
+            font-size: 16px;
+        }
+        
+        .schedule-details {
+            color: #666;
+            margin-top: 5px;
+        }
+        
+        .info-box {
+            padding: 20px;
+            border-radius: 10px;
+            margin: 25px 0;
+            border-left: 5px solid;
+        }
+        
+        .weather-info {
+            background: #fff3cd;
+            border-left-color: #ffc107;
+        }
+        
+        .dietary-info {
+            background: #d4edda;
+            border-left-color: #28a745;
+        }
+        
+        .info-box h4 {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        .rsvp-section {
+            background: linear-gradient(135deg, #2a4a7f, #1a365d);
+            color: white;
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .rsvp-section h3 {
+            font-size: 28px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #f0d78c;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            background: rgba(255,255,255,0.95);
+            color: #2a4a7f;
+        }
+        
+        .form-group textarea {
+            height: 80px;
+            resize: vertical;
+        }
+        
+        .form-row {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .form-row .form-group {
+            flex: 1;
+        }
+        
+        .checkbox-group {
+            margin: 15px 0;
+        }
+        
+        .checkbox-group label {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            font-weight: normal;
+        }
+        
+        .checkbox-group input[type="checkbox"] {
+            width: auto;
+            margin-right: 10px;
+        }
+        
+        .send-options {
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        .send-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #f0d78c;
+        }
+        
+        .send-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .send-btn {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s;
+            min-width: 200px;
+        }
+        
+        .send-btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        .email-btn {
+            background: #28a745;
+            color: white;
+        }
+        
+        .whatsapp-btn {
+            background: #25d366;
+            color: white;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 30px;
+            background: #f8f9fa;
+            border-top: 1px solid #e9ecef;
+        }
+        
+        .footer p {
+            margin: 10px 0;
+            color: #666;
+        }
+        
+        .celebration {
+            color: #2a4a7f;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                border-radius: 10px;
+            }
+            
+            .header {
+                padding: 30px 20px;
+            }
+            
+            .header .name {
+                font-size: 32px;
+            }
+            
+            .content {
+                padding: 30px 20px;
+            }
+            
+            .location-photos {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .form-row {
+                flex-direction: column;
+            }
+            
+            .send-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>✡️ YOU ARE CORDIALLY INVITED ✡️</h1>
+            <div style="font-size: 18px; direction: rtl; margin-top: 10px;">✡️ אתם מוזמנים בכבוד ✡️</div>
+            <h2>to the Bar Mitzvah of</h2>
+            <div style="font-size: 16px; direction: rtl; margin-bottom: 15px;">לבר מצווה של</div>
+            <div class="name">JACOB ELI RUBIN</div>
+            <div class="hebrew">יעקב אלי בן רון ורחל</div>
+        </div>
+
+        <!-- Date and Location -->
+        <div class="date-location">
+            <h2>Thursday, August 7, 2025</h2>
+            <div class="hebrew-date">יום חמישי, י"ג אב תשפ"ה</div>
+            <div style="font-size: 18px; color: #666;">Jerusalem, Israel</div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <!-- Jacob's Photo -->
+            <div class="photo-section">
+                <img src="JacobPortraintforSTD.jpg" 
+                     alt="Jacob Rubin" class="jacob-photo">
+            </div>
+
+            <!-- Location Photos -->
+            <div class="location-photos">
+                <div style="text-align: center;">
+                    <img src="HurvaPlaza.png" 
+                         alt="Hurva Synagogue" class="location-photo hurva-photo">
+                    <div class="photo-caption">Hurva Synagogue, Jewish Quarter</div>
+                    <div class="photo-caption" style="direction: rtl;">בית הכנסת החורבה, הרובע היהודי</div>
+                </div>
+                <div style="text-align: center;">
+                    <img src="WesternWall.jpg" 
+                         alt="Western Wall" class="location-photo">
+                    <div class="photo-caption">The Western Wall (Kotel)</div>
+                    <div class="photo-caption" style="direction: rtl;">הכותל המערבי</div>
+                </div>
+            </div>
+
+            <!-- Schedule -->
+            <div class="schedule">
+                <h3>📍 Schedule of Events / לוח זמנים</h3>
+                <div class="schedule-item">
+                    <div class="schedule-time">Morning Ceremony - 9:00 AM to 12:00 PM</div>
+                    <div class="schedule-time" style="direction: rtl; font-size: 14px; color: #666; margin-top: 5px;">טקס הבוקר - 9:00-12:00</div>
+                    <div class="schedule-details">
+                        <strong>9:00 AM:</strong> Meet at the Jewish Quarter Plaza in the Old City<br>
+                        <div style="direction: rtl; margin: 5px 0;"><strong>9:00:</strong> פגישה ברחבת הרובע היהודי בעיר העתיקה</div>
+                        <strong>10:00 AM:</strong> Ceremony, service and Torah reading at the Kotel (Western Wall)<br>
+                        <div style="direction: rtl; margin: 5px 0;"><strong>10:00:</strong> טקס, תפילה וקריאת התורה בכותל המערבי</div>
+                        <em>We will be close to the holy wall, near the border with the women's section</em><br>
+                        <em style="direction: rtl;">נהיה קרוב לכותל הקדוש, ליד הגבול עם מחיצת הנשים</em>
+                    </div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-time">Evening Celebration - 7:00 PM</div>
+                    <div class="schedule-time" style="direction: rtl; font-size: 14px; color: #666; margin-top: 5px;">חגיגת הערב - 19:00</div>
+                    <div class="schedule-details">
+                        <strong>7:00 PM:</strong> Evening Celebration - location to be announced<br>
+                        <div style="direction: rtl; margin-top: 5px;"><strong>19:00:</strong> חגיגת הערב - המיקום יוכרז</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Weather Info -->
+            <div class="info-box weather-info">
+                <h4 style="color: #856404;">☀️ Weather & Preparation / מזג אויר והכנות</h4>
+                <p style="color: #856404; margin: 5px 0;"><strong>Morning:</strong> Jerusalem can be hot - please bring water and dress comfortably</p>
+                <p style="color: #856404; margin: 5px 0; direction: rtl;"><strong>בוקר:</strong> ירושלים יכולה להיות חמה - הביאו מים והתלבשו בנוחות</p>
+                <p style="color: #856404; margin: 5px 0;"><strong>Evening:</strong> Semi-casual to semi-formal. Jerusalem evenings can get cold, so please bring a sweater if necessary</p>
+                <p style="color: #856404; margin: 5px 0; direction: rtl;"><strong>ערב:</strong> חצי קז'ואל עד חצי פורמלי. ערבי ירושלים יכולים להיות קרים, הביאו סוודר במידת הצורך</p>
+            </div>
+
+            <!-- Dietary Info -->
+            <div class="info-box dietary-info">
+                <h4 style="color: #155724;">🍽️ Meal Information / מידע על הארוחה</h4>
+                <p style="color: #155724; margin: 5px 0;">The meal will be strictly kosher</p>
+                <p style="color: #155724; margin: 5px 0; direction: rtl;">הארוחה תהיה כשרה למהדרין</p>
+                <p style="color: #155724; margin: 5px 0;">Please let us know about vegetarian needs or other dietary restrictions</p>
+                <p style="color: #155724; margin: 5px 0; direction: rtl;">אנא הודיעו לנו על צרכים צמחוניים או הגבלות תזונתיות אחרות</p>
+            </div>
+        </div>
+
+        <!-- RSVP Form -->
+        <div class="rsvp-section">
+            <h3>📝 Please RSVP by July 31, 2025 (ו' אב תשפ"ה)</h3>
+            
+            <form id="rsvpForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Your Name / שם *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address / אימייל *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone">Phone Number / טלפון</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="guests">Total Guests (including you) / מספר אורחים *</label>
+                        <select id="guests" name="guests" required>
+                            <option value="">Select number / בחר מספר</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="guest-names">Guest Names (if applicable) / שמות האורחים</label>
+                    <textarea id="guest-names" name="guest-names" 
+                              placeholder="Please list the names of all additional guests / אנא רשמו את שמות כל האורחים הנוספים"></textarea>
+                </div>
+
+                <div class="checkbox-group">
+                    <label style="color: #f0d78c; font-weight: bold; margin-bottom: 15px;">
+                        Which events will you attend? / לאילו אירועים תגיעו?
+                    </label>
+                    <label>
+                        <input type="checkbox" name="attendance" value="morning"> 
+                        Morning Ceremony at the Kotel (9 AM - 12 PM) / טקס הבוקר בכותל
+                    </label>
+                    <label>
+                        <input type="checkbox" name="attendance" value="evening"> 
+                        Evening Dinner Celebration (7 PM) / ארוחת הערב החגיגית
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label for="dietary">Dietary Restrictions / הגבלות תזונתיות</label>
+                    <select id="dietary" name="dietary">
+                        <option value="">No restrictions / ללא הגבלות</option>
+                        <option value="vegetarian">Vegetarian / צמחוני</option>
+                        <option value="other">Other (please specify) / אחר</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="special-requests">Special Requests or Comments / בקשות מיוחדות או הערות</label>
+                    <textarea id="special-requests" name="special-requests" 
+                              placeholder="Any special needs or messages for the family / כל צרכים מיוחדים או הודעות למשפחה"></textarea>
+                </div>
+
+                <div class="send-options">
+                    <div class="send-title">Choose How to Send Your RSVP / בחרו כיצד לשלוח את אישור ההשתתפות</div>
+                    <div class="send-buttons">
+                        <button type="button" class="send-btn email-btn" onclick="sendViaEmail()">
+                            📧 Send via Email<br>
+                            <small>שלח באימייל</small>
+                        </button>
+                        <button type="button" class="send-btn whatsapp-btn" onclick="sendViaWhatsApp()">
+                            💬 Send via WhatsApp<br>
+                            <small>שלח בוואטסאפ</small>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>With apologies for the late notice<br>
+               <span style="direction: rtl;">עם התנצלות על ההודעה המאוחרת</span></p>
+            <p class="celebration">
+                We can't wait to celebrate with you! 🎉<br>
+                <span style="direction: rtl;">אנחנו מחכים לחגוג איתכם!</span>
+            </p>
+            <p style="margin-top: 20px; font-size: 14px;">
+                Please send your RSVP to: <strong>rachelbrubin@gmail.com</strong><br>
+                <span style="direction: rtl;">אנא שלחו את אישור ההשתתפות ל: <strong>rachelbrubin@gmail.com</strong></span><br>
+                <em style="color: #dc3545;">⚠️ Important: Note the "b" between rachel and rubin!</em><br>
+                <em style="color: #dc3545; direction: rtl;">⚠️ חשוב: שימו לב ל"ב" בין rachel ל-rubin!</em>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        function sendViaEmail() {
+            const form = document.getElementById('rsvpForm');
+            const formData = new FormData(form);
+            
+            // Validate required fields
+            if (!formData.get('name') || !formData.get('email') || !formData.get('guests')) {
+                alert('Please fill in all required fields (Name, Email, Number of Guests)');
+                return;
+            }
+            
+            // Get attendance values
+            const attendance = [];
+            const attendanceInputs = document.querySelectorAll('input[name="attendance"]:checked');
+            attendanceInputs.forEach(input => {
+                attendance.push(input.value);
+            });
+            
+            // Build email body
+            let emailBody = `RSVP for Jacob's Bar Mitzvah - August 7, 2025\n\n`;
+            emailBody += `Name: ${formData.get('name')}\n`;
+            emailBody += `Email: ${formData.get('email')}\n`;
+            emailBody += `Phone: ${formData.get('phone') || 'Not provided'}\n`;
+            emailBody += `Number of Guests: ${formData.get('guests')}\n`;
+            
+            if (formData.get('guest-names')) {
+                emailBody += `Guest Names: ${formData.get('guest-names')}\n`;
+            }
+            
+            emailBody += `\nEvents Attending:\n`;
+            if (attendance.length > 0) {
+                attendance.forEach(event => {
+                    if (event === 'morning') emailBody += `- Morning Ceremony at the Kotel (9 AM - 12 PM)\n`;
+                    if (event === 'evening') emailBody += `- Evening Dinner Celebration (7 PM)\n`;
+                });
+            } else {
+                emailBody += `- No events selected\n`;
+            }
+            
+            if (formData.get('dietary')) {
+                emailBody += `\nDietary Restrictions: ${formData.get('dietary')}\n`;
+            }
+            
+            if (formData.get('special-requests')) {
+                emailBody += `\nSpecial Requests/Comments: ${formData.get('special-requests')}\n`;
+            }
+            
+            emailBody += `\n---\nSent from Jacob's Bar Mitzvah RSVP website`;
+            
+            // Create mailto link
+            const subject = encodeURIComponent('RSVP: Jacob\'s Bar Mitzvah - August 7, 2025');
+            const body = encodeURIComponent(emailBody);
+            const mailtoLink = `mailto:rachelbrubin@gmail.com?subject=${subject}&body=${body}`;
+            
+            // Open email client
+            window.location.href = mailtoLink;
+        }
+        
+        function sendViaWhatsApp() {
+            const form = document.getElementById('rsvpForm');
+            const formData = new FormData(form);
+            
+            // Validate required fields
+            if (!formData.get('name') || !formData.get('email') || !formData.get('guests')) {
+                alert('Please fill in all required fields (Name, Email, Number of Guests)');
+                return;
+            }
+            
+            // Get attendance values
+            const attendance = [];
+            const attendanceInputs = document.querySelectorAll('input[name="attendance"]:checked');
+            attendanceInputs.forEach(input => {
+                attendance.push(input.value);
+            });
+            
+            // Build WhatsApp message
+            let message = `🎉 RSVP for Jacob's Bar Mitzvah - August 7, 2025\n\n`;
+            message += `👤 Name: ${formData.get('name')}\n`;
+            message += `📧 Email: ${formData.get('email')}\n`;
+            message += `📱 Phone: ${formData.get('phone') || 'Not provided'}\n`;
+            message += `👥 Number of Guests: ${formData.get('guests')}\n`;
+            
+            if (formData.get('guest-names')) {
+                message += `📝 Guest Names: ${formData.get('guest-names')}\n`;
+            }
+            
+            message += `\n📅 Events Attending:\n`;
+            if (attendance.length > 0) {
+                attendance.forEach(event => {
+                    if (event === 'morning') message += `✅ Morning Ceremony at the Kotel (9 AM - 12 PM)\n`;
+                    if (event === 'evening') message += `✅ Evening Dinner Celebration (7 PM)\n`;
+                });
+            } else {
+                message += `❌ No events selected\n`;
+            }
+            
+            if (formData.get('dietary')) {
+                message += `\n🍽️ Dietary: ${formData.get('dietary')}\n`;
+            }
+            
+            if (formData.get('special-requests')) {
+                message += `\n💬 Comments: ${formData.get('special-requests')}\n`;
+            }
+            
+            // Create WhatsApp link with Rachel's number
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappLink = `https://wa.me/16173089164?text=${encodedMessage}`;
+            
+            // Open WhatsApp
+            window.open(whatsappLink, '_blank');
+        }
+    </script>
+</body>
+</html> 
